@@ -1,0 +1,7 @@
+{
+    "workbench.settings.useSplitJSON": true,
+    "terminal.integrated.commandsToSkipShell": [
+        "json"
+    ],
+    "workbench.settings.openDefaultSettings": true
+}
