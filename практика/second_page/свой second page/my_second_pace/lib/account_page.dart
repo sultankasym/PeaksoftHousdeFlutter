@@ -27,11 +27,14 @@ class _AccountPageState extends State<AccountPage> {
         children: [ 
           SizedBox( height: 40,),
           Card( child: 
-          TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(50),
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(10),
+                  ),
                 ),
               ),
             ),
@@ -42,16 +45,20 @@ class _AccountPageState extends State<AccountPage> {
           ),
           Card(
             color: Color.fromARGB(255, 216, 223, 229),
-            child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(50),
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
                   ),
                 ),
               ),
             ),
           ),
+        
         ],
       ),
     );

@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+//import 'package:flutter/widgets.dart';
+import 'package:my_second_pace/thierd_page.dart';
 import 'firstpage.dart';
 import 'account_page.dart';
+import 'thierd_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,7 +54,16 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) =>  const AccountPage( ),
+        builder: (context) => const AccountPage(),
+      ),
+    );
+  }
+
+  void _navigateToThierdPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Thierd_page(),
       ),
     );
   }
@@ -61,11 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.brown[400],
       appBar: AppBar(
         backgroundColor: Colors.blueGrey[800],
-        
-        leading: 
-       
-
-         ElevatedButton(
+        leading: ElevatedButton(
           onPressed: _navigateToAccountPage,
           child: const Icon(
             Icons.manage_accounts_outlined,
@@ -73,7 +82,6 @@ class _MyHomePageState extends State<MyHomePage> {
             color: Color.fromARGB(255, 231, 140, 14),
           ),
         ),
-        
         actions: [
           ElevatedButton(
             onPressed: _navigateToFirstPage,
@@ -131,16 +139,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            const Icon(
+            GestureDetector(
+              onTap: () {
+                _navigateToThierdPage();
+              },
+              child: const Icon(
+                Icons.save_rounded,
+                size: 50,
+                color: Color.fromARGB(255, 231, 140, 14),
+              ),
+            ),
+            /* const Icon(
               Icons.save_alt_sharp,
               size: 50,
               color: Color.fromARGB(255, 231, 140, 14),
-            ),
+            ),*/
           ],
         ),
       ),
     );
   }
 }
-
-
