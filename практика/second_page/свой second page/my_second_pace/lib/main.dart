@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-//import 'package:flutter/widgets.dart';
-import 'package:my_second_pace/thierd_page.dart';
 import 'firstpage.dart';
 import 'account_page.dart';
-import 'thierd_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -59,14 +55,14 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void _navigateToThierdPage() {
+/*  void _navigateToThierdPage() {
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => const Thierd_page(),
       ),
     );
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -139,7 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            GestureDetector(
+           /* GestureDetector(
               onTap: () {
                 _navigateToThierdPage();
               },
@@ -149,7 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 color: Color.fromARGB(255, 231, 140, 14),
               ),
             ),
-            /* const Icon(
+             const Icon(
               Icons.save_alt_sharp,
               size: 50,
               color: Color.fromARGB(255, 231, 140, 14),
