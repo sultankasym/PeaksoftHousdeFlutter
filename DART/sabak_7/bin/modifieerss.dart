@@ -4,7 +4,7 @@ void main() {
 
 
   //var - perviy tip ostaetsa, bolshe ne izmenit
-  var a = 10;
+
 
 
 

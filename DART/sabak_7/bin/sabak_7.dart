@@ -6,29 +6,42 @@
 
 
 void main(){
- String name0 = 'Salamat';
-  String name1 = 'Asan';
-   String name2 = 'Uson';
-double ves0 = 50.0;
-double ves1 = 60.0;
-double ves2 = 90.0;
-int rost0 = 160;
-int rost1 = 120;
-int rost2 = 180;
+int zarplata = 1000;
+int bizness = 2300;
+int karyzdar = 750;
+int otchet = ((zarplata+bizness-karyzdar)*30);
 
-int jash0 = 17;
-int jash1 = 16;
-int jash2 = 19;
- 
+print('в месяц можещ зарабатывать $otchet');
 
-}
-class Adam{
+String name = 'Sultan';
+int years = 1997;
+String adress = 'At Bashy';
+double weight = 65.9;
+bool wasStudent = true;
 
-  final String name;
-  final int age;
-}
+print('my name is $name. i was born in $years, in city $adress. i was student in university manas. that is $wasStudent.');
 
 
+print ('машина тандоо');
+String cars = 'Mercedes E class';
+int maxSpeed = 260;
+double maxDisplacement = 2.5;
+double minDisplacement = 1.5;
+
+ if(maxSpeed >= 200 && maxDisplacement>=2.5 && minDisplacement <=  1.7){
+print('for you $cars');
+}else{
+  ('you can buy anyway');
+  }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -38,24 +51,25 @@ class Adam{
  
  
  
- /*
  
-  //operators
-  //+    -    *    /    %
+ 
+ // operators
+//  +    -    *    /    %
 
 //  int a = 10;
 //   double b = 5.8;
 //   print(a+ b);
 
-//ternay operation
-int a = 4;
-int b = 6;
-String df = a!=b ? "a more b" : "no, b more a";
+// //ternay operation
+// int a = 4;
+// int b = 6;
+// String df = a!=b ? "a more b" : "no, b more a";
 
-bool isTrue = true;
-bool isFalse = false;
-var cevap = isFalse && isTrue;
-var cevap1 = isFalse || isTrue;
+// bool isTrue = true;
+// bool isFalse = false;
+// var cevap = isFalse && isTrue;
+// var cevap1 = isFalse || isTrue;
 
-print(df);*/
+// print(df);
+
 }
