@@ -6,6 +6,7 @@
 
 
 void main(){
+  print('зарплата эсептоо');
 int zarplata = 1000;
 int bizness = 2300;
 int karyzdar = 750;

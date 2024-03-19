@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "helper_travel",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "helper_travel (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "helper_travel (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "Flutter (Edge)",
+            "program": "lib/main.dart",
+            "deviceId": "edge",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}
