@@ -23,9 +23,11 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(          width: 500,  child: TextField(
+          SizedBox(
+            width: 500,
+            child: TextField(
               onChanged: (value) {
-                value = name;
+                name = value;
               },
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
@@ -42,7 +44,7 @@ class _HomePageState extends State<HomePage> {
             width: 500,
             child: TextField(
               onChanged: (value) {
-                value = email;
+                email = value;
               },
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
@@ -59,7 +61,7 @@ class _HomePageState extends State<HomePage> {
             width: 500,
             child: TextField(
               onChanged: (value) {
-                value = phone;
+                phone = value;
               },
               decoration: const InputDecoration(
                 border: OutlineInputBorder(),
@@ -73,33 +75,27 @@ class _HomePageState extends State<HomePage> {
             height: 20,
           ),
           ElevatedButton(
-            onPressed: () { Navigator.push(
+            onPressed: () {
+              if (name.isEmpty && email.isEmpty) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('please, write name'),
+                  ),
+                );
+              } else {
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => FirstPage(
                       email: email,
                       name: name,
                       phone: phone,
-              // if (name.isEmpty && email.isEmpty) {
-              //   ScaffoldMessenger.of(context).showSnackBar(
-              //     const SnackBar(
-              //       content: Text('please, write name'),
-              //     ),
-              //   );
-              // } else {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => FirstPage(
-                //       email: email,
-                //       name: name,
-                //       phone: phone,
                     ),
                   ),
                 );
-              },  child: null,
-           // },
-           // child: const Text('press'),
+              }
+            },
+            child: const Text('press'),
           )
         ],
       ),
