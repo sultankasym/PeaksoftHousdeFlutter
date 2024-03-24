@@ -69,7 +69,7 @@ class FirstPage extends StatelessWidget {
                   color: Colors.white,
                 ),
                 labelText: 'номер пользователя',
-                labelStyle: TextStyle(color: Colors.white),
+                labelStyle: const TextStyle(color: Colors.white),
                 fillColor: Colors.white,
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
@@ -83,20 +83,30 @@ class FirstPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                if (name.isEmpty || phone.isEmpty) {
+                if (name.isEmpty ) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('Напишите имя и номер'),
+                    const SnackBar(
+                      content: Text('Напишите имя '),
                     ),
                   );
-                }else{
-
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SecondPage(name: name, phone: phone),
-                  ),
-                );}
+                } else if (phone.isEmpty ) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Напишите номер '),
+                    ),
+                  );
+                }else
+                
+                
+                {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          SecondPage(name: name, phone: phone),
+                    ),
+                  );
+                }
               },
               child: const Text('Сохранить'),
             )
