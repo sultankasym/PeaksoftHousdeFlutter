@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatelessWidget {
-   SecondPage({super.key, required this.name, required this.userName });
+  SecondPage({super.key, required this.name, required this.userName});
 
-final String name;
-final String userName;
+  final String name;
+  final String userName;
   @override
   Widget build(BuildContext context) {
-
-
-
     return Scaffold(
       backgroundColor: Colors.indigo,
       body: Center(
@@ -34,7 +31,9 @@ final String userName;
               width: 50,
             ),
             Text(name),
-            SizedBox(height: 15,),
+            SizedBox(
+              height: 15,
+            ),
             Text(userName),
             ElevatedButton(
               onPressed: () {

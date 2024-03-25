@@ -83,22 +83,19 @@ class FirstPage extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                if (name.isEmpty ) {
+                if (name.isEmpty) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Text('Напишите имя '),
                     ),
                   );
-                } else if (phone.isEmpty ) {
+                } else if (phone.isEmpty) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
                       content: Text('Напишите номер '),
                     ),
                   );
-                }else
-                
-                
-                {
+                } else {
                   Navigator.push(
                     context,
                     MaterialPageRoute(

@@ -16,11 +16,11 @@ class _FirstPageState extends State<FirstPage> {
         
         children: [
           Container(
-            height: 500,
-            width: 500,
+            height: double.infinity,
+            width: double.infinity,
             decoration: const BoxDecoration(
-              image: DecorationImage(
-                fit: BoxFit.cover,
+              image: DecorationImage(                fit: BoxFit.cover,
+
                 image: AssetImage(
                   'assets/images/fon1.jpg',
                 ),

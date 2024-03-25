@@ -20,4 +20,9 @@ Set surname = {'asan','aman','esen', 3,'sjas',3 ,45,56}; // eki element kabyl al
 print(surname);
 Map mapName = {'1': 'asan', '2': 'esen', '3' : 'sa'};
 print(mapName['2']);
+Map map = {'color': 'white', 'animal': 'hourse', '3' : 'sa'};// ar bir ozuno birden maani alat
+print(map['color']);
+
+//Set <String> named= {'asan','aman','esen', 3,'sjas',3 ,45,56}; // generic opredelenniy tip alat
+
 }

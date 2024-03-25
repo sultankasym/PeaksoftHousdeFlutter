@@ -98,7 +98,7 @@ class MyHomePage extends StatelessWidget {
             onPressed: () {
               if (userName.isEmpty || name.isEmpty) {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(width: 1,
+                  const SnackBar(
                     duration: Duration(milliseconds: 200),
                     content: Text('jaz'),
                   ),
