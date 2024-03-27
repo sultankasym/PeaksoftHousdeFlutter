@@ -8,7 +8,7 @@ final void Function() onTap;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
         child: Container(
           color: color,
           width: MediaQuery.of(context).size.width,

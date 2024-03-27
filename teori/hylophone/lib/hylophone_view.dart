@@ -20,7 +20,7 @@ class _HylophoneState extends State<Hylophone> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text('Flutter Hylophone', style: TextStyle( color: Colors.white),),
+        title: const Text('Flutter Hylophone', style: TextStyle( color: Colors.white),),
       ),
       body:  Column(
         children: [
@@ -29,19 +29,19 @@ class _HylophoneState extends State<Hylophone> {
             onTap:(){ audioPlayers.play(AssetSource('note1.mp3'),);}
           ),
             PianoKeys(
-            color: Colors.red, text: 're', onTap: (){}
+            color: Colors.red, text: 're', onTap: (){ audioPlayers.play(AssetSource('note2.mp3'),);}
           ),
            PianoKeys(
-            color: Colors.blue, text: 'mi', onTap: () {  },
+            color: Colors.blue, text: 'mi', onTap: () {  audioPlayers.play(AssetSource('note3.mp3'),); },
           ),
           PianoKeys(
-            color: Colors.yellow, text: 'fa', onTap: () {  },
+            color: Colors.yellow, text: 'fa', onTap: () {  audioPlayers.play(AssetSource('note4.mp3'),); },
           ),
            PianoKeys(
-            color: Color.fromARGB(255, 57, 138, 61), text: 'sol', onTap: () {  },
+            color: const Color.fromARGB(255, 57, 138, 61), text: 'sol', onTap: () {  audioPlayers.play(AssetSource('note5.mp3'),); },
           ),
            PianoKeys(
-            color: Colors.yellow, text: 'lia', onTap: () {  },
+            color: Colors.yellow, text: 'lia', onTap: () {  audioPlayers.play(AssetSource('note6.mp3'),); },
           ),
         ],
       ),
