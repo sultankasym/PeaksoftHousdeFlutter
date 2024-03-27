@@ -30,39 +30,39 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.white,
         title: const Center(child: Text('Тапшырма 5')),
       ),
-      body: Column(children: [
-         if (firstDice1 == 6 && secondDice2 == 6) Text('win'),
-        Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-             
-              
-              Expanded(
-                child: Image.asset(
-                  'assets/images/icon$firstDice1.png',
+      body: Column(
+        children: [
+          if (firstDice1 == 6 && secondDice2 == 6) const Text('win'),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: Image.asset(
+                    'assets/images/icon$firstDice1.png',
+                  ),
                 ),
-              ),
-              const SizedBox(
-                width: 20,
-              ),
-              Expanded(
-                child: Image.asset(
-                  'assets/images/icon$secondDice2.png',
+                const SizedBox(
+                  width: 20,
                 ),
-              ),
-            ],
+                Expanded(
+                  child: Image.asset(
+                    'assets/images/icon$secondDice2.png',
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-        ElevatedButton.icon(
-          onPressed: () {
-            activing();
-          },
-          icon: Icon(Icons.tab),
-          label: Text('Play'),
-        ),
-      ]),
+          ElevatedButton.icon(
+            onPressed: () {
+              activing();
+            },
+            icon: const Icon(Icons.tab),
+            label: const Text('Play'),
+          ),
+        ],
+      ),
     );
   }
 }
