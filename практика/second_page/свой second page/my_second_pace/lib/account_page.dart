@@ -13,7 +13,7 @@ class _AccountPageState extends State<AccountPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 162, 147, 11),
+      backgroundColor: const Color.fromRGBO(162, 147, 11, 1),
       appBar: AppBar(
         title: const Text(
           'Пройдите Регистрацию',
@@ -21,17 +21,18 @@ class _AccountPageState extends State<AccountPage> {
           selectionColor: Colors.red,
         ),
       ),
-      body: const Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      body: const Column( 
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            height: 40,
+            height: 20,
           ),
           Card(
             child: Padding(
               padding: EdgeInsets.all(8.0),
               child: TextField(
                 decoration: InputDecoration(
+                  
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(
                       Radius.circular(10),
@@ -42,7 +43,7 @@ class _AccountPageState extends State<AccountPage> {
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 20,
           ),
           Card(
             color: Color.fromARGB(255, 216, 223, 229),

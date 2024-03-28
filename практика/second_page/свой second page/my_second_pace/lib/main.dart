@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_second_pace/thierd_page.dart';
 import 'firstpage.dart';
 import 'account_page.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        scaffoldBackgroundColor: const Color(0xff4BFFFB),
         useMaterial3: true,
       ),
       home: const MyHomePage(text: 'your diary'),
@@ -34,6 +35,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String? textForFirstPage;
+  
 
   void _navigateToFirstPage() {
     Navigator.push(
@@ -55,19 +57,19 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-/*  void _navigateToThierdPage() {
+  void _navigateToThierdPage() {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => const Thierd_page(),
+        builder: (context) => const ThierdPage(),
       ),
     );
-  }*/
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown[400],
+      // backgroundColor: Colors.brown[400],
       appBar: AppBar(
         backgroundColor: Colors.blueGrey[800],
         leading: ElevatedButton(
@@ -103,54 +105,52 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Image.network('https://www.pngwing.com/ru/free-png-zdmeb.png', height: 400, width: 500,),
-            const Text(
-              'Here you can write Diary',
-              style: TextStyle(/*fontFamily: 'DancingScript-Regular'*/),
-            ),
-            TextField(
-              onChanged: (value) {
-                setState(
-                  () {
-                    textForFirstPage = value;
-                  },
-                );
-              },
-              style: const TextStyle(
-                fontFamily: 'DancingScript-Regular',
-                fontWeight: FontWeight.w300,
+        child: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [Color(0xff164C4B), Color(0xff4BFFFB)])),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Image.network('https://www.pngwing.com/ru/free-png-zdmeb.png', height: 400, width: 500,),
+              const Text(
+                'Here you can write Diary',
+                style: TextStyle(fontFamily: 'DancingScript-Regular'),
               ),
-              maxLines: 10,
-              textAlign: TextAlign.justify,
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(width: 50),
-                  borderRadius: BorderRadius.horizontal(
-                    left: Radius.circular(25),
-                    right: Radius.circular(25),
+              TextField(
+                onChanged: (value) {
+                  setState(
+                    () {
+                      textForFirstPage = value;
+                    },
+                  );
+                },
+                style: const TextStyle(
+                  fontFamily: 'DancingScript-Regular',
+                  fontWeight: FontWeight.w300,
+                ),
+                maxLines: 10,
+                textAlign: TextAlign.justify,
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(width: 50),
+                    borderRadius: BorderRadius.horizontal(
+                      left: Radius.circular(25),
+                      right: Radius.circular(25),
+                    ),
                   ),
                 ),
               ),
-            ),
-           /* GestureDetector(
-              onTap: () {
-                _navigateToThierdPage();
-              },
-              child: const Icon(
-                Icons.save_rounded,
-                size: 50,
-                color: Color.fromARGB(255, 231, 140, 14),
+              ElevatedButton(
+              
+                onPressed: () {_navigateToFirstPage();}, child: const Text('Сохранить'),
+                  
+                
+              
               ),
-            ),
-             const Icon(
-              Icons.save_alt_sharp,
-              size: 50,
-              color: Color.fromARGB(255, 231, 140, 14),
-            ),*/
-          ],
+           
+            ],
+          ),
         ),
       ),
     );
